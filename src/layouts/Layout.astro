@@ -4,7 +4,9 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "Web Developer, Musician & Content Creator based in Maine" } = Astro.props;
+const { title, description = "Developer from Eastern Maine. Building products, leading teams, and occasionally making music." } = Astro.props;
+const siteUrl = "https://ryanprescott.com";
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 ---
 
 <!DOCTYPE html>
@@ -15,11 +17,42 @@ const { title, description = "Web Developer, Musician & Content Creator based in
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalUrl} />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={`${siteUrl}/ryan-p-headshot.jpeg`} />
+    <meta property="og:site_name" content="Ryan Prescott" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}/ryan-p-headshot.jpeg`} />
+
+    <!-- JSON-LD -->
+    <script is:inline type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ryan Prescott",
+        "url": "https://ryanprescott.com",
+        "image": "https://ryanprescott.com/ryan-p-headshot.jpeg",
+        "jobTitle": "Head of Engineering",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Indexify"
+        },
+        "sameAs": [
+          "https://github.com/ryanprescott",
+          "https://linkedin.com/in/ryanprescott",
+          "https://open.spotify.com/artist/1qYoSDz9q1e0PM20jL6fRu"
+        ]
+      }
+    </script>
 
     <title>{title}</title>
   </head>
