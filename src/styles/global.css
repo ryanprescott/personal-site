@@ -447,25 +447,16 @@ section + section {
 
 /* Alternating filled / outlined tags, like the business card */
 .skill-tag {
-  border: 2px solid var(--text-primary);
+  border: 1.5px solid var(--accent);
   padding: var(--space-xs) var(--space-md);
   border-radius: 10px;
-  font-size: 0.95rem;
-  color: var(--text-primary);
+  font-size: 0.9rem;
+  color: var(--accent);
 }
 
 .skill-tag:nth-child(odd) {
-  background: var(--text-primary);
+  background: var(--accent);
   color: var(--bg-primary);
-}
-
-.skills-list--plain .skill-tag,
-.skills-list--plain .skill-tag:nth-child(odd) {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  font-size: 0.875rem;
-  color: var(--text-secondary);
 }
 
 /* Music Section */
