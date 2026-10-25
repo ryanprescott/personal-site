@@ -8,16 +8,41 @@ import Layout from '../layouts/Layout.astro';
     <section class="hero">
       <img src="/ryan-p-headshot.jpeg" alt="Ryan Prescott" class="headshot" />
       <h1 class="hero-name">ryan prescott<span class="hero-cursor"></span></h1>
-      <p class="tagline">writing code & songs, usually at the same time</p>
-      <p class="intro">
-        Developer from Eastern Maine with 8+ years exp. building things that actually work.
-        I spend most of my time architecting complex systems, but I'm just as likely to be
-        writing a song, messing with my homelab, or troubleshooting whatever my friends broke this time.
+      <p class="hero-pillars">tech &middot; music &middot; beyond</p>
+      <ul class="hero-contact">
+        <li>maine &harr; nyc</li>
+        <li><a href="tel:+12079523892">(207) 952-3892</a></li>
+        <li><a href="mailto:hello@ryanp.co">hello@ryanp.co</a></li>
+      </ul>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        born and raised in rural downeast maine. my first memories include beige CRT
+        monitors and chittering hard drives. started coding at 8 years old. started making
+        music at 10.
+      </p>
+      <p>
+        my tech career began shortly after, removing viruses and replacing screens.
+        i worked my way up from there:
+      </p>
+      <ol class="career-path">
+        <li>computer technician</li>
+        <li>help desk</li>
+        <li>sys admin</li>
+        <li>freelance developer</li>
+        <li>founding level engineer</li>
+      </ol>
+      <p>
+        i bring a wide range of skills across multiple technical domains and a unique
+        perspective to problem solving. full ai native leveraging LLMs daily for coding tasks.
       </p>
     </section>
 
-    <!-- About / Philosophy -->
-    <section id="about">
+    <!-- Philosophy -->
+    <section id="philosophy">
       <h2>Philosophy</h2>
       <p>
         Code is just the output. What actually matters 
@@ -57,19 +82,6 @@ import Layout from '../layouts/Layout.astro';
           and champion LLM-assisted development (yes, with Claude Code).
         </p>
         <a href="https://indexify.finance" target="_blank" rel="noopener">indexify.finance &rarr;</a>
-      </div>
-
-      <div class="card">
-        <h3>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Unvibe.it
-        </h3>
-        <p class="card-meta">Founder</p>
-        <p>
-          Security auditing for vibe-coded apps. We find and fix the vulnerabilities
-          that AI-assisted development leaves behind.
-        </p>
-        <a href="https://unvibe.it" target="_blank" rel="noopener">unvibe.it &rarr;</a>
       </div>
 
       <div class="card">
@@ -114,20 +126,52 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- Skills -->
     <section id="skills">
-      <h2>Tools of the Trade</h2>
-      <div class="skills-list">
-        <span class="skill-tag">JavaScript / TypeScript</span>
-        <span class="skill-tag">Golang</span>
-        <span class="skill-tag">React</span>
-        <span class="skill-tag">Sveltekit</span>
-        <span class="skill-tag">PHP</span>
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">PostgreSQL</span>
-        <span class="skill-tag">MySQL</span>
-        <span class="skill-tag">Linux</span>
-        <span class="skill-tag">AWS</span>
-        <span class="skill-tag">Docker</span>
-        <span class="skill-tag">Git</span>
+      <h2>What I Do</h2>
+
+      <div class="skill-group">
+        <h3 class="skill-group-heading">Tech <span>10+ yrs professional exp.</span></h3>
+        <div class="skills-list">
+          <span class="skill-tag">web apps</span>
+          <span class="skill-tag">cloud infra</span>
+          <span class="skill-tag">devops</span>
+          <span class="skill-tag">AI / LLMs</span>
+          <span class="skill-tag">small business</span>
+          <span class="skill-tag">enterprise</span>
+          <span class="skill-tag">device repair</span>
+          <span class="skill-tag">systems</span>
+          <span class="skill-tag">IT support</span>
+          <span class="skill-tag">procurement</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-group-heading">Music <span>lifelong hobbyist</span></h3>
+        <div class="skills-list">
+          <span class="skill-tag">singing</span>
+          <span class="skill-tag">songwriting</span>
+          <span class="skill-tag">composition</span>
+          <span class="skill-tag">production</span>
+          <span class="skill-tag">mixing</span>
+          <span class="skill-tag">distribution</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3 class="skill-group-heading">Tools of the Trade</h3>
+        <div class="skills-list skills-list--plain">
+          <span class="skill-tag">JavaScript / TypeScript</span>
+          <span class="skill-tag">Golang</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Sveltekit</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Git</span>
+        </div>
       </div>
     </section>
 
@@ -213,9 +257,27 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- Links -->
     <section id="connect">
-      <h2>Find Me Elsewhere</h2>
+      <h2>Get in Touch</h2>
+      <p>
+        Need a hand with tech, music, or something in between? Reach out —
+        I split my time between Maine and NYC.
+      </p>
 
       <div class="links-grid">
+        <a href="mailto:hello@ryanp.co" class="link-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 6 12 13 2 6"/></svg>
+          hello@ryanp.co
+        </a>
+
+        <a href="tel:+12079523892" class="link-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (207) 952-3892
+        </a>
+      </div>
+
+      <h3 class="other-projects-heading">Find Me Elsewhere</h3>
+
+      <div class="links-grid links-grid--tight">
         <a href="https://www.linkedin.com/in/ryanpdev" target="_blank" rel="noopener" class="link-card">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           LinkedIn
